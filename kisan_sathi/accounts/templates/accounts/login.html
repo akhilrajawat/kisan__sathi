@@ -50,6 +50,14 @@
     </style>
 </head>
 <body>
+    {% comment %} {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %} {% endcomment %}
+
     <div class="container">
         <h2>Login</h2>
         {% if error %} <p class="msg">{{ error }}</p> {% endif %}

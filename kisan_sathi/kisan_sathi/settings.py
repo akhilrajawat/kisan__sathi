@@ -95,6 +95,20 @@ MONGO_CLIENT = MongoClient("mongodb://localhost:27017/")
 MONGO_DB = MONGO_CLIENT["kisan_sathi"]
 
 
+import pymongo
+from django.conf import settings
+
+# Connect to MongoDB
+MONGO_URI = "mongodb://localhost:27017/"  # Update if necessary
+MONGO_DB_NAME = "kisan_sathi"  # Change to your actual DB name
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+db = client["kisan_sathi" ]  # Define 'db' here
+users_collection = db["users"]  # Define 'users_collection' correctly
+
+
+
+
 
 
 
@@ -147,12 +161,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # SESSION_SAVE_EVERY_REQUEST = True  # Refresh session expiry on each request
 
 
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_HOST = "smtp.gmail.com"
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = "kisansathiofficial99@gmail.com"  # Replace with your email
-# EMAIL_HOST_PASSWORD = "zxry agzk pvig ywyt"  # Use an App Password if using Gmail
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+    # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+    # EMAIL_HOST = "smtp.gmail.com"
+    # EMAIL_PORT = 587
+    # EMAIL_USE_TLS = True
+    # EMAIL_HOST_USER = "kisansathiofficial99@gmail.com"  # Replace with your email
+    # EMAIL_HOST_PASSWORD = "zxry agzk pvig ywyt"  # Use an App Password if using Gmail
+    # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 

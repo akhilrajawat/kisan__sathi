@@ -25,20 +25,21 @@
             margin-bottom: 20px;
         }
         input {
-            width: 100%;
+            width: 90%;
             padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            margin: 12px 0;
+            border: 2px solid #ccc;
+            border-radius: 7px;
         }
         .btn {
             width: 100%;
             background: #e68900;
             color: white;
             padding: 10px;
-            border: none;
+            border-radius: 7px;
             margin-top: 10px;
             cursor: pointer;
+            border:none;
         }
         .btn:hover {
             background: darkgreen;
@@ -60,6 +61,7 @@
     </style>
 </head>
 <body>
+    
     <div class="container">
         <h2>Login</h2>
         {% if error %} <p class="msg">{{ error }}</p> {% endif %}
